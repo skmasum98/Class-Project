@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -19,29 +18,29 @@ body {
 }
 
 .logo img {
-    max-height: 50px; /* Ensures the logo is of a reasonable size */
+    max-height: 50px;
 }
 
 .nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Makes the nav links align in a row */
+    display: flex;
 }
 
 .nav li {
-    margin: 0 15px; /* Adds space between each nav item */
+    margin: 0 15px;
 }
 
 .nav a {
     text-decoration: none;
-    color: #333; /* Dark color for the nav links */
+    color: #333;
     font-weight: bold;
 }
 
 .auth-buttons {
     display: flex;
-    gap: 10px; /* Space between the buttons */
+    gap: 10px;
 }
 
 .auth-buttons button {
@@ -54,277 +53,249 @@ body {
 }
 
 .auth-buttons .sign-in {
-    background-color: #007BFF; /* Bootstrap primary color */
+    background-color: #007BFF;
     color: white;
 }
 
 .auth-buttons .login {
-    background-color: #28a745; /* Bootstrap success color */
+    background-color: #28a745;
     color: white;
 }
 
 .auth-buttons button:hover {
-    opacity: 0.9; /* Adds a hover effect */
+    opacity: 0.9;
 }
 
-/* Hero section styling */
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    position: relative; /* Set to relative for absolutely positioned elements */
-    background-image: 
-        url('img/hero/bg-left-top.png'), 
-        url('img/hero/bd-top-middle.png'), 
-        url('img/hero/bg-left-bottom.png'), 
-        url('img/hero/bd-top-middle.png'), 
-        url('img/hero/bg-right-bottom.png');
-    background-position: 
-        top left, 
-        top center, 
-        bottom left, 
-        bottom center, 
-        bottom right;
-    background-size: 80px 120px; /* Adjust based on your image size */
-    background-repeat: no-repeat; /* Prevent repeating of background images */
-    padding: 20px; /* Add some padding */
+    height: 100vh;
+    position: relative;
+    background-image: url('img/hero/bg-left-top.png'), url('img/hero/bd-top-middle.png'), url('img/hero/bg-left-bottom.png'), url('img/hero/bd-top-middle.png'), url('img/hero/bg-right-bottom.png');
+    background-position: top left, top center, bottom left, bottom center, bottom right;
+    background-size: 80px 120px;
+    background-repeat: no-repeat;
+    padding: 20px;
 }
 
-/* Add a pseudo-element for the top right background image */
 .hero::before {
-    content: url('img/hero/bg-right-middle.png'); 
-    position: absolute; /* Position relative to the .hero */
-    right: 0; /* Align to the right edge */
-    top: 20%; /* Position from the top */
-    width: 80px; /* Width of the image */
-    height: 120px; /* Height of the image */
-    z-index: 1; /* Ensure it stays above other background images */
+    content: url('img/hero/bg-right-middle.png');
+    position: absolute;
+    right: 0;
+    top: 20%;
+    width: 80px;
+    height: 120px;
+    z-index: 1;
 }
 
-/* Content styling */
 .content {
-    max-width: 500px; /* Limit width of text block */
-    color: rgb(0, 0, 0); /* Text color for contrast against background */
+    max-width: 500px;
+    color: rgb(0, 0, 0);
 }
 
 .content h1 {
-    font-size: 2.5em; /* Size of heading */
-    margin-bottom: 20px; /* Space below heading */
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .content p {
-    margin-bottom: 15px; /* Space between paragraphs */
-    font-size: 1.2em; /* Font size of paragraph */
+    margin-bottom: 15px;
+    font-size: 1.2em;
 }
 
 button {
-    padding: 10px 20px; /* Padding for button */
-    font-size: 1em; /* Font size for button */
-    background-color: #007BFF; /* Button color */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    cursor: pointer; /* Cursor changes to pointer */
-    transition: background-color 0.3s; /* Smooth transition */
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
-/* Hero image styling */
 .hero-image {
-    flex-shrink: 0; /* Prevent the hero image from shrinking */
+    flex-shrink: 0;
 }
 
 .hero-image img {
-    max-width: 100%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
 }
 
-
-
-/* Next Section Styling */
 .next-section {
-    display: flex; /* Flexbox for two-part layout */
-    align-items: center; /* Align items at the top */
-    justify-content: space-between; /* Space between elements */
-    padding: 40px; /* Padding around the section */
-    position: relative; /* Positioning context for absolute children */
-    background-color: #f9f9f9; /* Background color for the section */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    position: relative;
+    background-color: #f9f9f9;
 }
 
-/* Left Part Styling */
 .left-part {
-    flex: 1; /* Allow the left part to take available space */
-    position: relative; /* Positioning context */
+    flex: 1;
+    position: relative;
 }
 
 .left-image {
-    max-width: 100%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
     position: relative;
     z-index: 100;
 }
 
-/* Background image for the left part */
 .left-part::after {
-    content: ''; 
-    position: absolute; 
-    background-image: url('img/section-2/left-bg.png'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    width: 150px; 
-    height: 150px; 
-    bottom: 150px; 
-    right: 100px; 
-    z-index: 5; 
+    content: '';
+    position: absolute;
+    background-image: url('img/section-2/left-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    bottom: 150px;
+    right: 100px;
+    z-index: 5;
 }
 
-/* Right Part Styling */
 .right-part {
-    flex: 2; /* Allow the right part to take more space */
-    max-width: 600px; /* Optional max width */
-    display: flex; /* Enable flex on the right part */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
+    flex: 2;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .right-part h2 {
-    font-size: 1.8em; /* Heading size */
-    margin-bottom: 15px; /* Space below heading */
+    font-size: 1.8em;
+    margin-bottom: 15px;
 }
 
 .right-part p {
-    margin-bottom: 20px; /* Space below paragraph */
-    font-size: 1.1em; /* Font size for paragraph */
-    line-height: 1.6; /* Improve readability */
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
 }
 
 button {
-    padding: 10px 20px; /* Padding for button */
-    font-size: 1em; /* Font size for button */
-    background-color: #007BFF; /* Button color */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    cursor: pointer; /* Change cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition */
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 .next-section::after {
-    content: ''; /* Necessary for a pseudo-element */
-    position: absolute; /* Position it absolutely */
-    background-image: url('img/section-2/Group.png'); /* Background image */
-    background-size: contain; /* Scale the image to fit the area */
-    background-repeat: no-repeat; /* No repeat */
-    width: 150px; /* Adjust width */
-    height: 150px; /* Adjust height */
-    right: 20px; /* Position it 20px from the right */
-    bottom: 20px; /* Position it 20px from the bottom */
-    z-index: 0; /* Ensure it sits behind other content */
+    content: '';
+    position: absolute;
+    background-image: url('img/section-2/Group.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 0;
 }
 
-/* About section */
-/* About Section Styling */
 .about-section {
-    display: flex; /* Flexbox for two-part layout */
+    display: flex;
     align-items: center;
-    position: relative; /* Relative positioning for the section */
-    padding: 40px; /* Padding around the section */
-    background-color: #f5f5f5; /* Background color for the section */
+    position: relative;
+    padding: 40px;
+    background-color: #f5f5f5;
 }
 
-/* Background Icons */
 .background-icons {
-    position: absolute; /* Positioning for absolute items */
-    top: 0; /* Aligns to the top of the section */
-    left: 0; /* Aligns to the left side */
-    width: 100%; /* Make full width */
-    height: 100%; /* Make full height */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .top-left-icon {
     position: absolute;
-    background-image: url('img/about/bg.png'); /* Background image for top-left icon */
-    width: 100px; /* Adjust size based on your icon */
-    height: 80px; /* Adjust size based on your icon */
-    top: 20px; /* Adjust position */
-    left: 0; /* Adjust position */
-    background-size: contain; /* Ensure the icon fits */
-    background-repeat: no-repeat; /* No repeat */
-    z-index: 1; /* Ensure it sits above background */
+    background-image: url('img/about/bg.png');
+    width: 100px;
+    height: 80px;
+    top: 20px;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
 }
 
 .bottom-right-icon {
     position: absolute;
-    background-image: url('img/about/bg.png'); /* Background image for bottom-right icon */
-    width: 150px; /* Adjust size based on your icon */
-    height: 80px; /* Adjust size based on your icon */
-    bottom: -50px; /* Adjust position */
-    right: 0; /* Adjust position */
-    background-size: contain; /* Ensure the icon fits */
-    background-repeat: no-repeat; /* No repeat */
-    z-index: 1; /* Ensure it sits above background */
+    background-image: url('img/about/bg.png');
+    width: 150px;
+    height: 80px;
+    bottom: -50px;
+    right: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
 }
 
-/* Boxes Container */
 .boxes-container {
-    display: flex; /* Flexbox for boxes layout */
-    justify-content: space-between; /* Space between boxes */
-    margin-top: 100px; /* Space from the top */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
 }
 
-/* Individual Box Styling */
 .box {
-    flex: 1; /* Each box should take the same amount of space */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside boxes */
-    margin: 10px; /* Margin around boxes */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: center; /* Center text alignment */
-    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+    flex: 1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .box:hover {
-    transform: scale(1.05); /* Slightly enlarge the box on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increase shadow for depth on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .box-icon {
-    width: 80px; /* Width of box icons */
-    height: 80px; /* Height of box icons */
-    background-size: contain; /* Logo fits within the div */
-    background-repeat: no-repeat; /* No repeat */
-    margin: 0 auto 15px; /* Center box and margin below */
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto 15px;
 }
 
 .box h3 {
-    font-size: 1.5em; /* Headline size */
-    margin-bottom: 10px; /* Space below heading */
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 .box p {
-    font-size: 1em; /* Paragraph size */
-    line-height: 1.5; /* Improve readability */
+    font-size: 1em;
+    line-height: 1.5;
 }
-
-/* Features Section */
 
 .featured {
     display: flex;
     flex-direction: column;
     align-items: left;
     padding: 40px;
-    background-image: url('img/Featured/bgleft.png'), url('img/Featured/bg-right-bottom.png'); /* Replace with your image paths */
+    background-image: url('img/Featured/bgleft.png'), url('img/Featured/bg-right-bottom.png');
     background-position: left top, right bottom;
     background-repeat: no-repeat, no-repeat;
     background-size: 100px 200px;
     color: #333;
-    
 }
 
 .featured-title {
@@ -342,7 +313,6 @@ button:hover {
     justify-content: space-around;
     width: 100%;
     max-width: 1200px;
-
 }
 
 .course-box {
@@ -366,18 +336,16 @@ button:hover {
     border-radius: 10px;
 }
 
-
-/* Learning Section */
 .learning {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px;
-    background-color: #f9f9f9; /* A light background color for distinction */
+    background-color: #f9f9f9;
 }
 
 .learning-top-image {
-    width: 100px; /* Adjust the width as necessary */
+    width: 100px;
     height: auto;
     margin-bottom: -50px;
 }
@@ -391,7 +359,7 @@ button:hover {
 
 .learning-left {
     flex: 1;
-    margin-right: 20px; /* Space between the two columns */
+    margin-right: 20px;
     margin-top: 20%;
 }
 
@@ -421,7 +389,7 @@ button:hover {
 .learning-right-image {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* Rounded corners for the right image */
+    border-radius: 10px;
 }
 
 .learning-bottom-images {
@@ -433,57 +401,52 @@ button:hover {
 }
 
 .bottom-image {
-    width: 150px; /* Each image takes up nearly half the width */
+    width: 150px;
     height: auto;
 }
 
 .left-bottom {
-    order: 1; /* Left image */
+    order: 1;
 }
 
 .right-bottom {
-    order: 2; /* Right image */
+    order: 2;
     margin-top: -70px;
     margin-right: -35px;
-
 }
 
-
-/* ///////////////////Newsletter////////////// */
-
 .newsletter-section {
-    
-    margin: 0 20px; /* Left and right margin */
-    padding: 40px; /* Padding for the section */
+    margin: 0 20px;
+    padding: 40px;
     position: relative;
 }
 
 .newsletter-content {
-    background-image: url('img/newsletter/bg.png'); /* Background image */
+    background-image: url('img/newsletter/bg.png');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px; /* Space for the bottom image */
+    margin-bottom: 40px;
 }
 
 .newsletter-left {
-    flex: 1; /* Take remaining space */
-    max-width: 600px; /* Limit width as necessary */
+    flex: 1;
+    max-width: 600px;
     padding-left: 20px;
 }
 
 .newsletter-description {
     font-size: 18px;
-    color: #8785aa; /* Color for the description */
+    color: #8785aa;
 }
 
 .newsletter-title {
     font-size: 40px;
     font-weight: bold;
-    color: #1a1a1a; /* Title color */
-    margin: 10px 0; /* Margin for spacing */
+    color: #1a1a1a;
+    margin: 10px 0;
 }
 
 .newsletter-form {
@@ -491,16 +454,16 @@ button:hover {
 }
 
 .email-input {
-    width: 70%; /* Width of input field */
+    width: 70%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 10px; /* Space between input and button */
+    margin-right: 10px;
 }
 
 .subscribe-button {
     padding: 10px 20px;
-    background-color: #009688; /* Button color */
+    background-color: #009688;
     color: white;
     border: none;
     border-radius: 5px;
@@ -509,111 +472,105 @@ button:hover {
 }
 
 .subscribe-button:hover {
-    background-color: #00796b; /* Darker shade on hover */
+    background-color: #00796b;
 }
 
 .newsletter-right {
-    flex: 1; /* Take remaining space */
+    flex: 1;
     display: flex;
-    justify-content: flex-end; /* Align image to the right */
+    justify-content: flex-end;
 }
 
 .right-image {
-    width: 100%; /* Responsive image */
+    width: 100%;
     height: auto;
-    max-width: 400px; /* Limit the max width of the right image */
+    max-width: 400px;
 }
 
 .bottom-right-image {
     position: absolute;
-    bottom: -80px; /* Position from the bottom */
-    right: 20px; /* Position from the right */
-    width: 300px; /* Adjust size as necessary */
+    bottom: -80px;
+    right: 20px;
+    width: 300px;
     height: auto;
 }
 
-/* /////////////////Footer////////////////// */
 .footer {
-    background-color: #f8f9fa; /* Footer background color */
-    padding: 40px 20px; /* Vertical and horizontal padding */
+    background-color: #f8f9fa;
+    padding: 40px 20px;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between; /* Space between columns */
-    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer-column {
-    flex: 0 1 20%; /* Each of the first three columns take 25% of space */
+    flex: 0 1 20%;
     padding: 20px;
 }
 
 .footer-column-large {
-    flex: 0 1 40%; /* The last column takes 50% of the width */
+    flex: 0 1 40%;
 }
 
 .footer-column h4 {
-    font-size: 1.2rem; /* Heading size */
-    margin-bottom: 10px; /* Space below heading */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 .footer-column ul {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
+    list-style-type: none;
+    padding: 0;
 }
 
 .footer-column li {
-    margin: 5px 0; /* Space between list items */
+    margin: 5px 0;
 }
 
 .footer-column a {
-    text-decoration: none; /* Remove underline from links */
-    color: #007bff; /* Link color */
+    text-decoration: none;
+    color: #007bff;
 }
 
 .footer-column a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
 .social-media {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Space below social media icons */
+    margin-bottom: 20px;
 }
 
 .social-media a {
-    margin-right: 15px; /* Space between icons */
+    margin-right: 15px;
     margin-left: 20px;
 }
 
 .map {
-    margin-top: 20px; /* Space above the map */
+    margin-top: 20px;
 }
 
 .map img {
-    width: 100%; /* Responsive map image */
-    max-width: 300px; /* Limit max width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
 }
 
-
-/* Responsive Styles */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column; /* Stack the items in smaller screens */
+        flex-direction: column;
         text-align: center;
     }
-
     .nav ul {
-        flex-direction: column; /* Stack nav items vertically */
+        flex-direction: column;
     }
-
     .nav li {
-        margin: 10px 0; /* Spacing for stacked navigation */
+        margin: 10px 0;
     }
-
     .auth-buttons {
-        flex-direction: column; /* Stack buttons vertically */
+        flex-direction: column;
     }
 }
