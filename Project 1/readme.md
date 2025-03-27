@@ -1,1 +1,2 @@
-Find Live project : https://ic-figma-html.netlify.app/
+Portfolio make with Project class 
+Live LiNK: https://ic-portfolio.netlify.app/
